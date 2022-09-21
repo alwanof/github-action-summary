@@ -1,0 +1,22 @@
+{
+  "name": "native-tc-ads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "testcafe": "^2.0.0"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "dotenv": "^16.0.0",
+    "testcafe-reporter-list": "^2.1.0",
+    "testcafe-reporter-reportportal": "^1.0.29",
+    "testcafe-reporter-spec": "^2.1.1"
+  }
+}

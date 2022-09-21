@@ -1,0 +1,20 @@
+{
+    "browsers": "chrome:headless --cache  --window-size=1920,1080",
+    "screenshots": {
+        "path": "report/screenshots",
+        "takeOnFails": true,
+        "fullPage": true
+    },
+    "debugOnFail":false,
+    "quarantineMode": {
+        "successThreshold": 1,
+        "attemptLimit": 3
+    },
+    "concurrency": 2,
+    "selectorTimeout": 12000,
+    "assertionTimeout": 12000,
+    "pageLoadTimeout": 12000,
+    "ajaxRequestTimeout": 9000,
+    "pageRequestTimeout": 8000,
+    "skipJsErrors": true
+}

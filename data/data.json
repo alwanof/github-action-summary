@@ -1,0 +1,26 @@
+    { 
+        "home":
+            {
+                "title": "Discover Metaverses",
+                "contactURL":"contact",
+                "decURL":"metaverse/decentraland",
+                "sndURL":"metaverse/sandbox",
+                "somURL":"metaverse/somniumspace"
+            } ,
+        "contact":
+            {
+                "title":"Get in Touch"
+            } ,
+        "metadec":
+        {
+            "title":"Discover Decentraland"
+        },
+        "metasnd":
+        {
+            "title":"Discover The Sandbox"
+        },
+        "metasom":
+        {
+            "title":"Discover Somnium Space"
+        }             
+    }
