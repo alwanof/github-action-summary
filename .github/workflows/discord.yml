@@ -13,6 +13,6 @@ jobs:
         DISCORD_WEBHOOK: https://discord.com/api/webhooks/1022189972830306395/lXCQt0OuS44MvPraWk2_bauJz7dBmYKk6b1ocE5L7TVAlweWQh6iNP1E3GOjQ-uGBbjk
       uses: Ilshidur/action-discord@master
       with:
-        args: 'The project has been deployed.'
+        args: "Auto Test has been executed on BID plateform, for more details please refer to: ${{ github.run_id }}"
    
      
