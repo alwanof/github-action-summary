@@ -10,9 +10,6 @@ jobs:
         node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
-    - name: display reesults
-      run: |
-        echo '### Test Summary! :rocket:' >> $GITHUB_STEP_SUMMARY
     - uses: actions/checkout@v2
     - name: Run NPM
       uses: actions/setup-node@v2
@@ -22,6 +19,13 @@ jobs:
     - run: npm ci
     - name: Run Test
       id: run_test
-      run: npm test
-
+      run: |
+        testResults=$(npm test)
+        echo "testResults<<EOF" >> $GITHUB_ENV
+        echo "$testResults" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
+    - name: display reesults
+      run: |
+        echo '### Test Summary! :rocket:' >> $GITHUB_STEP_SUMMARY
+        echo "Results: ${{ env.testResults }}">> $GITHUB_STEP_SUMMARY
 
