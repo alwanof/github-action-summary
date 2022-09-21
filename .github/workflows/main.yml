@@ -1,0 +1,27 @@
+name: Summary Check
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Automation Testing
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    steps:
+    - name: display reesults
+      run: |
+        echo '### Test Summary! :rocket:' >> $GITHUB_STEP_SUMMARY
+    - uses: actions/checkout@v2
+    - name: Run NPM
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - name: Run Test
+      id: run_test
+      run: npm test
+
+
