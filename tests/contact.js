@@ -11,7 +11,7 @@ fixture`Contact Page`
     .page`${process.env.BASE_URL}/contact`
 
     
-test.only('User should be able to access contact page', async t => {
+test('User should be able to access contact page', async t => {
    
    
     await  t
@@ -31,7 +31,7 @@ test.skip('User should be able to submit contact form', async t => {
   
 } );
 
-test.only('User should be able to working with form', async t => {
+test.skip('User should be able to working with form', async t => {
     console.log("+Trying to work: with form");
     await  t
         .expect(true).eql(true);
