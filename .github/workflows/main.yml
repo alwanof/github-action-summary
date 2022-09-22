@@ -21,7 +21,7 @@ jobs:
     - name: Run Test
       id: run_test
       run: |
-        printf -v testResults "%s\n" $(npm test)
+        printf -v testResults "$(npm test)"
         echo "testResults<<EOF" >> $GITHUB_ENV
         echo "$testResults" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
