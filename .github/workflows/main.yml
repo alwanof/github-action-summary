@@ -34,4 +34,10 @@ jobs:
       run: |
         echo '### Test Summary! :rocket:' >> $GITHUB_STEP_SUMMARY
         echo "Results: ${{ env.testResults }}">> $GITHUB_STEP_SUMMARY
+    - name: Discord notification
+      env:
+        DISCORD_WEBHOOK: https://discord.com/api/webhooks/1022189972830306395/lXCQt0OuS44MvPraWk2_bauJz7dBmYKk6b1ocE5L7TVAlweWQh6iNP1E3GOjQ-uGBbjk
+      uses: Ilshidur/action-discord@master
+      with:
+        args: "Automation Regression Test has been executed on the [BID platform], for more details please refer to: https://github.com/alwanof/github-action-summary/actions/runs/${{ github.run_id }}"
 
