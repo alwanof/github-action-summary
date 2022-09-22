@@ -13,15 +13,13 @@ fixture`Contact Page`
     
 test.only('User should be able to access contact page', async t => {
    
-    console.log("+Trying to read: contact title");
+   
     await  t
-        .expect(true).eql(true);
-    // await  t
-    // .expect(contactPage.title.textContent).eql(`${data.contact.title}`);
+    .expect(contactPage.title.textContent).eql(`${data.contact.title}`);
 
-    // await t
-    // .switchToIframe("#hs-form-iframe-0")
-    // .expect(contactPage.formSubmitBTN.exists).ok();
+    await t
+    .switchToIframe("#hs-form-iframe-0")
+    .expect(contactPage.formSubmitBTN.exists).ok();
   
 });
 
